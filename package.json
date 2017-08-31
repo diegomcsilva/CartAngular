@@ -3,12 +3,16 @@
   "version": "1.0.0",
   "description": "Desafio realizado para a empresa Intercase",
   "main": "gulpfile.js",
-  "dependencies": {
-  },
-  "devDependencies":
-  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "angular": "^1.6.6",
+    "gulp": "^3.9.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-live-server": "0.0.31"
   },
   "repository": {
     "type": "git",

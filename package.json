@@ -1,0 +1,23 @@
+{
+  "name": "CarAngular",
+  "version": "1.0.0",
+  "description": "Desafio realizado para a empresa Intercase",
+  "main": "gulpfile.js",
+  "dependencies": {
+  },
+  "devDependencies":
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diegomcsilva/CartAngular.git"
+  },
+  "author": "Diego Marcelo Costa da Silva",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/diegomcsilva/CartAngular.git"
+  },
+  "homepage": "https://github.com/diegomcsilva/CartAngular.git#readme"
+}

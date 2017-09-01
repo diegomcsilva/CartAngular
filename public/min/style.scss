@@ -1,0 +1,78 @@
+$cor-thema:  #86bbd8;
+$font-main: 'Roboto', sans-serif;
+
+* {
+    font-family: $font-main;
+}
+
+* {
+    padding:0;
+    margin:0;
+    vertical-align:baseline;
+    list-style:none;
+    border:0
+}
+
+.cart {
+    &__header {
+        background-color: $cor-thema;
+        height: 110px;
+        box-shadow: inset 0px -4px 11px -6px #081E28;
+        &-logo {
+            width: 100px;
+            margin: 10px 0;
+            display: inline-block;
+        }
+        h2 {
+            width: 50%;
+            display: inline-block;
+            text-align: center;
+            vertical-align: top;
+            line-height: 100px;
+        }
+    }
+    &__container {
+        width: 80%;
+        margin: 0 auto;
+    }
+    &__item {
+        width: 100%;
+        &-header {
+            th {
+                padding: 10px 0px;
+                border-bottom: 1px solid #666;
+                width: 25%;
+            }
+        }
+        &-body {
+            td {
+                width: 25%;
+                text-align: center;
+                vertical-align: middle;
+                padding: 15px 0;
+            }
+            &--img {
+                img {
+                    width: 80px;
+                    height: auto;
+                }
+            }
+            &--qtd {
+                p {
+                    border: 1px solid #000;
+                    width: 20%;
+                    margin: 0 auto;
+                    padding: 10px;
+                }
+            }
+        }
+    }
+}
+
+* {
+    padding:0;
+    margin:0;
+    vertical-align:baseline;
+    list-style:none;
+    border:0
+}

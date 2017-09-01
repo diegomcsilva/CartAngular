@@ -1,3 +1,9 @@
+angular.module('myApp').component('headerCart', {
+  templateUrl: '../view/headerCart.html',
+  bindings: {
+  }
+});
+
 var app = angular.module('app',[]);
 
 app.controller('CartForm', ['$scope', function($scope) {

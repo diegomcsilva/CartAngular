@@ -6,17 +6,16 @@
         <meta http-equiv="Content-Language" content="pt-br">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
-        <link rel="stylesheet" href="public/css/style.css">
+        <link rel="stylesheet" href="public/min/style.css">
         <!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script> -->
-        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.4‌​/angular.js"></script> -->
         <script src="/node_modules/angular/angular.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     </head>
-    <body ng-app="app" class="cart">    
+    <body ng-app="app" class="cart">
         <header-cart></header-cart>
         <div ng-controller="CartForm">
             <div class="cart__container">
-                <table class="cart_item">
+                <table class="cart__item">
                     <thead class="cart__item-header">
                         <tr>
                             <th>Item</th>
@@ -31,43 +30,29 @@
                         <tr ng-repeat="item in items">
                             <td class="cart__item-body--img"><img src="{{ item.image }}"></td>
                             <td class="cart__item-body--name"><p>{{ item.name }}</p></td>
-                            <td class="cart__item-body--qtd"><spam ng-click="lessItem($index)">-</spam><p> {{ item.quantity }}</p><spam ng-click="moreItem($index)">+</spam></td>
+                            <td class="cart__item-body--qtd" ng-model='qtd'><span class="btn-less" ng-click="lessItem($index)">-</span><p> {{ item.quantity }}</p><span class="btn-more" ng-click="moreItem($index)">+</span></td>
                             <td class="cart__item-body--price"><p> {{ item.price | currency:'R$ '}}</p></td>
                             <td class="cart__item-body--total">{{ item.price * item.quantity | currency:'R$ ' }}</td>
-                            <td>
-                                [<a href ng-click="removeItem($index)">X</a>]
+                            <td ng-click="removeItem($index)">
+                                <p class="remove-item">X</p>
                             </td>
                         </tr>
+                        <tr class="cart__item-total">
+                           <td colspan="3"></td>
+                           <td>Total:</td>
+                           <td class="cart__item-total--valor">{{total() | currency:'R$ '}}</td>
+                           <td></td>
+                       </tr>
                     </tbody>
                 </table>
             </div>
         </div>
-        <div>
-            <div>
-                informe seu CEP
-            </div>
-            <div>
-                <ul>
-                    <tr>
-                        <td>qtd produto</td>
-                        <td class="text-uppercase">R$</td>
-                        <td id="basket-summary-subtotal" class="text-right col-xs-4">total</td>
-                    </tr>
-                </ul>
-            </div>
-            <div>
-                <ul>
-                    <li>
-                        <a class="" id="" href="">
-                            Comprar
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <a href="/">Escolher mais produtos</a>
-        </div>
+        <total-cart></total-cart>
+        <footer-cart></footer-cart>
 
-        <script type="text/javascript" src="src/js/script.js"></script>
-        <script type="text/javascript" src="src/js/header-cart.js"></script>
+        <script type="text/javascript" src="public/js/_script.js"></script>
+        <script type="text/javascript" src="public/js/_header-cart.js"></script>
+        <script type="text/javascript" src="public/js/_total-cart.js"></script>
+        <script type="text/javascript" src="public/js/_footer-cart.js"></script>
     </body>
 </html>

@@ -1,3 +1,18 @@
+$cor-thema:  #86bbd8;
+$font-main: 'Roboto', sans-serif;
+
+* {
+    font-family: $font-main;
+}
+
+* {
+    padding:0;
+    margin:0;
+    vertical-align:baseline;
+    list-style:none;
+    border:0
+}
+
 .cart {
     background-color: #3f4258;
     &__header {

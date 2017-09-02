@@ -11,26 +11,27 @@ var gulp = require('gulp'),
 gulp.task('default', ['sass', 'watch' , 'compress' , 'scripts', 'css' , 'serve']);
 
 gulp.task('sass', function() {
-    return gulp.src('public/min/style.scss')
+    return gulp.src('public/scss/style.scss')
     .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
-    .pipe(gulp.dest('public/css'));
+    .pipe(gulp.dest('public/min'));
 });
 
 gulp.task('css', function() {
   return gulp.src('src/scss/*scss')
     .pipe(concat('style.scss'))
-    .pipe(gulp.dest('public/min/'));
+    .pipe(gulp.dest('public/scss/'));
 });
 
 gulp.task('scripts', function() {
     return gulp.src('src/js/*.js')
     .pipe(concat('all.js'))
+    .pipe(uglify())
     .pipe(gulp.dest('public/min/'));
 });
 
 gulp.task('compress', function (cb) {
   pump([
-        gulp.src('public/js/all.js'),
+        gulp.src('src/js/*.js'),
         uglify(),
         gulp.dest('public/js')
     ],

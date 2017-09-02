@@ -5,6 +5,9 @@
 - [Gulp]()
 - [AngularJS]()
 
+## Metodologia
+- Metodologia Bem
+- Componetização de html (Angular)
 
 ## Diretórios de trabalho
 - HTML - `./`

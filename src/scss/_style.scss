@@ -1,6 +1,6 @@
 .cart {
     &__header {
-        background-color: $cor-thema;
+        /*background-color: $cor-thema;*/
         height: 110px;
         box-shadow: inset 0px -4px 11px -6px #081E28;
         &-logo {
@@ -52,12 +52,4 @@
             }
         }
     }
-}
-
-* {
-    padding:0;
-    margin:0;
-    vertical-align:baseline;
-    list-style:none;
-    border:0
 }

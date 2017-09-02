@@ -1,7 +1,6 @@
-angular.module('myApp').component('headerCart', {
-  templateUrl: '../view/headerCart.html',
-  bindings: {
-  }
+angular.module('app').component('headerCart', {
+  templateUrl: 'src/view/headerCart.html',
+  bindings: ""
 });
 
 var app = angular.module('app',[]);

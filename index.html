@@ -7,17 +7,13 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" href="public/css/style.css">
-        <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script>
+        <!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script> -->
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.4‌​/angular.js"></script> -->
+        <script src="/node_modules/angular/angular.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     </head>
-    <body ng-app="app" class="cart">
-        <header class="cart__header">
-            <div class="cart__container">
-                <img src="https://raw.githubusercontent.com/diegomcsilva/DieGO/master/src/images/Logo.ico" class="cart__header-logo">
-                <h2>Carrinho de compras<h2>
-            </div>
-        </header>
-        <!-- <header-cart></header-cart> -->
+    <body ng-app="app" class="cart">    
+        <header-cart></header-cart>
         <div ng-controller="CartForm">
             <div class="cart__container">
                 <table class="cart_item">
@@ -34,7 +30,7 @@
                     <tbody class="cart__item-body">
                         <tr ng-repeat="item in items">
                             <td class="cart__item-body--img"><img src="{{ item.image }}"></td>
-                            <td class="cart__item-body--name"><p>{{ items.name }}</p></td>
+                            <td class="cart__item-body--name"><p>{{ item.name }}</p></td>
                             <td class="cart__item-body--qtd"><spam ng-click="lessItem($index)">-</spam><p> {{ item.quantity }}</p><spam ng-click="moreItem($index)">+</spam></td>
                             <td class="cart__item-body--price"><p> {{ item.price | currency:'R$ '}}</p></td>
                             <td class="cart__item-body--total">{{ item.price * item.quantity | currency:'R$ ' }}</td>
@@ -72,5 +68,6 @@
         </div>
 
         <script type="text/javascript" src="src/js/script.js"></script>
+        <script type="text/javascript" src="src/js/header-cart.js"></script>
     </body>
 </html>

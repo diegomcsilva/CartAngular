@@ -32,9 +32,9 @@
                         </tr>
                     </thead>
                     <tbody class="cart__item-body">
-                        <tr ng-repeat="item in invoice.items">
+                        <tr ng-repeat="item in items">
                             <td class="cart__item-body--img"><img src="{{ item.image }}"></td>
-                            <td class="cart__item-body--name"><p>{{ item.name }}</p></td>
+                            <td class="cart__item-body--name"><p>{{ items.name }}</p></td>
                             <td class="cart__item-body--qtd"><spam ng-click="lessItem($index)">-</spam><p> {{ item.quantity }}</p><spam ng-click="moreItem($index)">+</spam></td>
                             <td class="cart__item-body--price"><p> {{ item.price | currency:'R$ '}}</p></td>
                             <td class="cart__item-body--total">{{ item.price * item.quantity | currency:'R$ ' }}</td>

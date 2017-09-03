@@ -1,0 +1,1 @@
+"use strict";function initEmpty(){!function(){for(var t=$("td img"),n=0;n<t.length;n++)""==t[n].currentSrc&&(t[n].src="src/img/cart-empty.png")}()}$(document).ready(function(){checkImg()}),window.onload=initEmpty;

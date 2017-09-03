@@ -1,17 +1,20 @@
 "use strict";
 
 function initEmpty() {
-    function checkimg() {
+    function checkImg() {
 
         var obj = $('td img');
 
-        for (i = 0 ; i < obj.length; i++) {
+        for (var i = 0; i < obj.length; i++) {
         	if (obj[i].currentSrc == "") {
         		obj[i].src = 'src/img/cart-empty.png'
             }
         }
     }
-    checkimg();
+    checkImg();
 }
 
+$( document ).ready(function() {
+    checkImg();
+})
 window.onload = initEmpty;

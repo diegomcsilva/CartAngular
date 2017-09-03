@@ -1,8 +1,24 @@
-$cor-thema:  #86bbd8;
+/////////////////////////////////////////////////////////////
+                        //Variáveis//
+/////////////////////////////////////////////////////////////
+
+$cor-thema: #3f4258;
+$white: #FFF;
 $font-main: 'Roboto', sans-serif;
 
-* {
-    font-family: $font-main;
+/////////////////////////////////////////////////////////////
+                        //Mixins//
+/////////////////////////////////////////////////////////////
+
+/*Necessário colocar a url da imagem a largura e a altura
+Ex: @include bkg-img('../../src/img/icon-lock.png', 30px, 35px);*/
+@mixin bkg-img($img, $width, $height) {
+    background-image: url($img);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: $width;
+    height: $height;
+    content: " ";
 }
 
 * {
@@ -10,22 +26,23 @@ $font-main: 'Roboto', sans-serif;
     margin:0;
     vertical-align:baseline;
     list-style:none;
-    border:0
+    border:0;
+    font-family: $font-main;
 }
 
 .cart {
-    background-color: #3f4258;
     &__header {
-        /*background-color: $cor-thema;*/
+        background-color: $cor-thema;
         height: 110px;
         box-shadow: inset 0px -4px 11px -6px #f6f7fa;
         &-logo {
             width: 100px;
             margin: 10px 0;
             display: inline-block;
+            box-shadow: 0px 0px 18px 0px black;
         }
         h1 {
-            width: 65%;
+            width: 62%;
             display: inline-block;
             text-align: center;
             vertical-align: top;
@@ -36,8 +53,8 @@ $font-main: 'Roboto', sans-serif;
             text-shadow: -5px 2px 7px black;
         }
         &-lock {
-            width: 20%;
-            color: #FFF;
+            width: 25%;
+            color: $white;
             font-size: 14px;
             font-weight: 500;
             display: flex;
@@ -50,12 +67,7 @@ $font-main: 'Roboto', sans-serif;
                 padding-left: 5px;
             }
             &:after {
-                background-image: url('../../src/img/icon-lock.png');
-                width: 30px;
-                height: 35px;
-                content: " ";
-                background-repeat: no-repeat;
-                background-size: contain;
+                @include bkg-img('../../src/img/icon-lock.png', 30px, 35px);
                 display: block;
                 cursor: pointer;
                 position: relative;
@@ -67,10 +79,39 @@ $font-main: 'Roboto', sans-serif;
     &__container {
         width: 80%;
         margin: 0 auto;
+        &.container-comprar {
+            padding: 50px;
+            a {
+                text-decoration: none;
+                background-color: #86bbd8;
+                padding: 10px;
+                color: $white;
+                border-radius: 5px;
+                &:hover {
+                    opacity: 0.9;
+                }
+            }
+            div {
+                float: right;
+                .btn-comprar {
+                    text-decoration: none;
+                    background-color: #798299;
+                    color: $white;
+                    padding: 12px 80px;
+                    border-radius: 5px;
+                    transition: all 1s;
+                    &:hover {
+                        box-shadow: inset 0px 0px 12px 2px #3f4258;
+                        transition: all 1s;
+                    }
+                }
+            }
+        }
     }
     &__item {
-        background-color: #FFF;
+        background-color: $white;
         width: 100%;
+        border-collapse: collapse;
         &-header {
             th {
                 padding: 10px 0px;
@@ -79,6 +120,11 @@ $font-main: 'Roboto', sans-serif;
         &-body {
             tr {
                 border-bottom: 1px solid #e6e7f1;
+                transition: all 1s;
+                &:hover {
+                    background-color: #798299 !important;
+                    transition: all 1s;
+                }
                 &:nth-child(odd) {
                     background-color: #f6f7fa;
                 }
@@ -96,12 +142,7 @@ $font-main: 'Roboto', sans-serif;
                     width: 5%;
                     padding: 10px;
                     &:before {
-                        background-image: url('../../src/img/trash-cart.png');
-                        width: 30px;
-                        height: 35px;
-                        content: " ";
-                        background-repeat: no-repeat;
-                        background-size: contain;
+                        @include bkg-img('../../src/img/trash-cart.png', 30px, 35px);
                         display: block;
                         cursor: pointer;
                     }
@@ -121,34 +162,21 @@ $font-main: 'Roboto', sans-serif;
                 span {
                     display: inline-block;
                     margin: 0 15px;
-                    font-size: 0px;
                     cursor: pointer;
-                }
-                .btn-less, .btn-more {
-                    &:before {
-                        background-image: url('../../src/img/arrow.png');
-                        width: 20px;
-                        height: 18px;
-                        content: " ";
-                        background-repeat: no-repeat;
-                        background-size: contain;
-                        display: block;
-                    }
-                }
-                .btn-more {
-                    &:before {
-                        transform: rotate(180deg);
-                    }
+                    font-size: 24px;
+                    font-weight: bold;
+                    color: #3f4258;
                 }
                 p {
-                    border: 1px solid #000;
+                    border: 1px solid #798299;
                     width: 20%;
                     margin: 0 auto;
                     padding: 15px 20px 15px 18px;
                     display: inline;
                     font-size: 18px;
                     font-weight: bold;
-                    background-color: #FFF;
+                    background-color: $white;
+                    box-shadow: inset 0 0 6px -1px black;
                 }
             }
             &--price, &--total{
@@ -157,9 +185,142 @@ $font-main: 'Roboto', sans-serif;
         }
         &-total {
             font-weight: 600;
-            background-color: #FFF;
+            background-color: $white;
             &--valor {
                 color: #3f4258;
+            }
+        }
+    }
+    &__footer {
+        background-color: #3f4258;
+        color: #fff;
+        &-atendimento {
+            border-bottom: 1px solid #f6f7fa;
+            text-align: center;
+            padding: 8px;
+            p {
+                display: inline-block;
+                &:last-child {
+                    strong {
+                        font-weight: 100;
+                    }
+                }
+            }
+        }
+        &-copyright {
+            text-align: center;
+            font-size: 14px;
+            padding: 10px;
+            letter-spacing: 2px;
+        }
+    }
+    .modal {
+        display: none;
+        &.show {
+            display: block;
+        }
+    }
+    .home {
+        text-align: center;
+        margin: 150px auto;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .cart {
+        &__header {
+            &-logo {
+                margin-left: 5px;
+            }
+            h1 {
+                width: 50%;
+                font-size: 23px;
+                line-height: 50px;
+            }
+            &-lock {
+                width: auto;
+                padding-top: 0px;
+                font-size: 0px;
+                strong {
+                    font-size: 0px;
+                }
+                &:after {
+                    bottom: 0px;
+                    right: 20px;
+                    top: 35px;
+                }
+            }
+        }
+        &__container {
+            width: 100%;
+            &.container-comprar {
+                padding: 0px;
+                .btn-continue {
+                    display: block;
+                    margin: 35px auto;
+                    width: 60%;
+                    text-align: center;
+                }
+                div {
+                    margin: 0 auto;
+                    width: 220px;
+                    float: initial;
+                    margin-bottom: 40px;
+                }
+            }
+        }
+        &__item {
+            &-body {
+                td {
+                    float: left;
+                    .remove-item {
+                        padding: 0px;
+                        position: relative;
+                        top: 40px;
+                    }
+                }
+                &--qtd {
+                    width: 25%;
+                    p {
+                        display: inline-block;
+                    }
+                    span {
+                        display: block;
+                    }
+                }
+                &--img {
+                    width: auto;
+                    margin: 0 4%;
+                }
+                &--name {
+                    width: 60%;
+                    margin: 2%;
+                    height: 75px;
+                    overflow: hidden;
+                }
+                &--price {
+                    position: relative;
+                    top: 20px;
+                    left: 42px;
+                }
+
+                &--total {
+                    position: relative;
+                    top: 60px;
+                    right: 40px;
+                    &--valor {
+                        margin-left: 5px;
+                    }
+                }
+            }
+            &-header {
+                display: none;
+            }
+            &-total {
+                &--valor {
+                    margin-left: 5px;
+                }
             }
         }
     }

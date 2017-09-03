@@ -38,13 +38,4 @@ app.controller('CartForm', ['$scope', '$http', function($scope, $http) {
 
         return total;
     };
-
-    // $scope.totalGeral = function() {
-    //     var total = 0;
-    //     angular.forEach($scope.items, function(item) {
-    //         total += $scope.qtd;
-    //     })
-    //
-    //     return total;
-    // };
 }]);

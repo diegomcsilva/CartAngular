@@ -2,17 +2,17 @@
     <head>
         <base href="/">
         <meta charset="utf-8">
-        <title>FountainJS</title>
+        <title>Carrinho</title>
         <meta http-equiv="Content-Language" content="pt-br">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" href="public/min/style.css">
-        <!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script> -->
-        <script src="/node_modules/angular/angular.js"></script>
-        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="/node_modules/sweetalert/dist/sweetalert.css">
+        <link href="//fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     </head>
     <body ng-app="app" class="cart">
         <header-cart></header-cart>
+        <total-cart></total-cart>
         <div ng-controller="CartForm">
             <div class="cart__container">
                 <table class="cart__item">
@@ -30,7 +30,7 @@
                         <tr ng-repeat="item in items">
                             <td class="cart__item-body--img"><img src="{{ item.image }}"></td>
                             <td class="cart__item-body--name"><p>{{ item.name }}</p></td>
-                            <td class="cart__item-body--qtd" ng-model='qtd'><span class="btn-less" ng-click="lessItem($index)">-</span><p> {{ item.quantity }}</p><span class="btn-more" ng-click="moreItem($index)">+</span></td>
+                            <td class="cart__item-body--qtd"><span class="btn-less" ng-click="lessItem($index)">-</span><p> {{ item.quantity }}</p><span class="btn-more" ng-click="moreItem($index)">+</span></td>
                             <td class="cart__item-body--price"><p> {{ item.price | currency:'R$ '}}</p></td>
                             <td class="cart__item-body--total">{{ item.price * item.quantity | currency:'R$ ' }}</td>
                             <td ng-click="removeItem($index)">
@@ -50,9 +50,16 @@
         <total-cart></total-cart>
         <footer-cart></footer-cart>
 
+        <script src="/node_modules/angular/angular.js"></script>
+        <script src="/node_modules/jquery-ui/external/jquery-1.7.0/jquery.js"></script>
+        <script src="/node_modules/sweetalert/dist/sweetalert.min.js"></script>
+
         <script type="text/javascript" src="public/js/_script.js"></script>
         <script type="text/javascript" src="public/js/_header-cart.js"></script>
         <script type="text/javascript" src="public/js/_total-cart.js"></script>
         <script type="text/javascript" src="public/js/_footer-cart.js"></script>
+        <script type="text/javascript" src="public/js/_modal.js"></script>
+        <script type="text/javascript" src="public/js/_scripts.js"></script>
+
     </body>
 </html>

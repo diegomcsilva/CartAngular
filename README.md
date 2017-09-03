@@ -4,6 +4,17 @@
 - [Node]()
 - [Gulp]()
 - [AngularJS]()
+- [Jquery-UI]
+
+
+## DevDependencies
+- "gulp-concat": "^2.6.1",
+- "gulp-live-server": "0.0.31",
+- "gulp-sass": "^3.1.0",
+- "gulp-uglify": "^3.0.0",
+- "gulp-watch": "^4.3.11",
+- "pump": "^1.0.2",
+- "sweetalert": "^1.1.3"
 
 ## Metodologia
 - Metodologia Bem

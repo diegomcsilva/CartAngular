@@ -1,6 +1,22 @@
-$cor-thema:  #86bbd8;
+/////////////////////////////////////////////////////////////
+                        //Variáveis//
+/////////////////////////////////////////////////////////////
+
+$cor-thema: #3f4258;
+$white: #FFF;
 $font-main: 'Roboto', sans-serif;
 
-* {
-    font-family: $font-main;
+/////////////////////////////////////////////////////////////
+                        //Mixins//
+/////////////////////////////////////////////////////////////
+
+/*Necessário colocar a url da imagem a largura e a altura
+Ex: @include bkg-img('../../src/img/icon-lock.png', 30px, 35px);*/
+@mixin bkg-img($img, $width, $height) {
+    background-image: url($img);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: $width;
+    height: $height;
+    content: " ";
 }

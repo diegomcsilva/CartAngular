@@ -1,10 +1,10 @@
 # CartAngular
 
 ## Dependências
-- [Node]()
-- [Gulp]()
-- [AngularJS]()
-- [Jquery-UI]()
+- [Node](https://nodejs.org/en/)
+- [Gulp](https://gulpjs.com/)
+- [AngularJS](https://angularjs.org/)
+- [Jquery-UI](https://jqueryui.com/)
 
 
 ## DevDependencies
@@ -40,7 +40,7 @@
 - Ambiente de desenvolvimento `(sudo) gulp`
 
 ## Plugins
-- [sweetalert]
+- [sweetalert](https://sweetalert.js.org/)
 
 ## Descrição
 Projeto desenvolvido com o objetivo de demonstrar meu trabalho.

@@ -4,21 +4,28 @@
 - [Node]()
 - [Gulp]()
 - [AngularJS]()
-- [Jquery-UI]
+- [Jquery-UI]()
 
 
 ## DevDependencies
+- "angular": "^1.6.5",
+- "gulp": "^3.9.1",
 - "gulp-concat": "^2.6.1",
 - "gulp-live-server": "0.0.31",
 - "gulp-sass": "^3.1.0",
 - "gulp-uglify": "^3.0.0",
 - "gulp-watch": "^4.3.11",
+- "jasmine": "^2.8.0",
+- "jasmine-core": "^2.8.0",
+- "karma": "^1.7.1",
+- "karma-chrome-launcher": "^2.2.0",
+- "karma-jasmine": "^1.1.0",
 - "pump": "^1.0.2",
 - "sweetalert": "^1.1.3"
 
 ## Metodologia
 - Metodologia Bem
-- Componetização de html (Angular)
+- Componetização (Angular)
 
 ## Diretórios de trabalho
 - HTML - `./`
@@ -32,10 +39,8 @@
 ## Subindo projeto
 - Ambiente de desenvolvimento `(sudo) gulp`
 
-## Scripts
-
 ## Plugins
+- [sweetalert]
 
 ## Descrição
-
-Projeto desenvolvido com o objetivo de demonstrar meu trabalho
+Projeto desenvolvido com o objetivo de demonstrar meu trabalho.

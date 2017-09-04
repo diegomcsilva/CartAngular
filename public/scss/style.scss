@@ -30,6 +30,10 @@ Ex: @include bkg-img('../../src/img/icon-lock.png', 30px, 35px);*/
     font-family: $font-main;
 }
 
+/////////////////////////////////////////////////////////////
+                        //Carrinho//
+/////////////////////////////////////////////////////////////
+
 .cart {
     &__header {
         background-color: $cor-thema;
@@ -227,7 +231,9 @@ Ex: @include bkg-img('../../src/img/icon-lock.png', 30px, 35px);*/
     }
 }
 
-
+/////////////////////////////////////////////////////////////
+                        //Carrinho mobile//
+/////////////////////////////////////////////////////////////
 @media screen and (max-width: 768px) {
     .cart {
         &__header {

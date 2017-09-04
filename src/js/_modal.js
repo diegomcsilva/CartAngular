@@ -2,7 +2,7 @@
 
 function init() {
 
-    //
+    /*** Modal após clicar no bobão comprar ***/
     function modalComprar() {
         $('.btn-comprar').click(function(event) {
             event.preventDefault();
@@ -27,6 +27,7 @@ function init() {
         });
     }
 
+    /*** Modal após clicar em 'escolher mais produto'***/
     function modalContinueCompras() {
         $('.btn-continue').click(function(event) {
             event.preventDefault();
@@ -52,6 +53,7 @@ function init() {
         });
     }
 
+    /*** Verificar se a imagem não existe e adicionar uma imagem default***/
     function checkImg() {
 
         var obj = $('td img');
@@ -64,7 +66,6 @@ function init() {
     }
 
     checkImg();
-
     modalComprar();
     modalContinueCompras();
 }

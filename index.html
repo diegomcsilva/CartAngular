@@ -1,9 +1,8 @@
-<html>
+<html lang="pt-br">
     <head>
         <base href="/">
-        <meta charset="utf-8">
         <title>Carrinho</title>
-        <meta http-equiv="Content-Language" content="pt-br">
+        <meta charset="utf-8">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" href="public/min/style.css">
@@ -11,8 +10,11 @@
         <link href="//fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     </head>
     <body ng-app="app" class="cart">
+
         <header-cart></header-cart>
+
         <total-cart></total-cart>
+
         <div ng-controller="CartForm">
             <div class="cart__container">
                 <table class="cart__item">
@@ -47,13 +49,17 @@
                 </table>
             </div>
         </div>
+
         <total-cart></total-cart>
+
         <footer-cart></footer-cart>
 
+        <!-- Dependências -->
         <script src="/node_modules/angular/angular.js"></script>
         <script src="/node_modules/jquery-ui/external/jquery-1.7.0/jquery.js"></script>
         <script src="/node_modules/sweetalert/dist/sweetalert.min.js"></script>
 
+        <!-- Scripts de interações -->
         <script type="text/javascript" src="public/js/_script.js"></script>
         <script type="text/javascript" src="public/js/_modal.js"></script>
         <script type="text/javascript" src="public/js/_header-cart.js"></script>

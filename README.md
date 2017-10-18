@@ -35,6 +35,9 @@
 
 ## Instalando dependências
 - Instalar os módulos node `(sudo) npm install`
+```
+npm install
+```
 
 ## Subindo projeto
 - Ambiente de desenvolvimento `(sudo) gulp`
